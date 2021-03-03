@@ -2,7 +2,10 @@
   <div class="container">
     <div>
       <Logo />
+      <img src="@/assets/img/imagen.jpeg" />
+      <img src="https://cde.laprensa.e3.pe/ima/0/0/2/3/8/238082.jpg" />
       <h1 class="title">kitterns</h1>
+      <h2>un subtitulo</h2>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
