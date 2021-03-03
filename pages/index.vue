@@ -2,8 +2,8 @@
   <div class="container">
     <div>
       <Logo />
-      <img src="@/assets/img/imagen.jpeg" />
-      <img src="https://cde.laprensa.e3.pe/ima/0/0/2/3/8/238082.jpg" />
+      <!--img src="@/assets/img/imagen.jpeg" />
+      <img src="https://cde.laprensa.e3.pe/ima/0/0/2/3/8/238082.jpg" /-->
       <h1 class="title">kitterns</h1>
       <h2>un subtitulo</h2>
       <div class="links">
@@ -32,19 +32,11 @@
 export default {}
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
+<style lang="scss">
+/* Sample `apply` at-rules with Tailwind CSS  */
+
 .container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 
 .title {
