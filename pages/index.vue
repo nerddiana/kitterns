@@ -4,6 +4,13 @@
       <!--Logo />
       <img src="@/assets/img/imagen.jpeg" />
       <img src="https://cde.laprensa.e3.pe/ima/0/0/2/3/8/238082.jpg" /-->
+      <template>
+        <section>
+          <div v-if="$device.isDesktop">Desktop</div>
+          <div v-else-if="$device.isTablet">Tablet</div>
+          <div v-else>Mobile</div>
+        </section>
+      </template>
       <h1 class="title">kitterns</h1>
       <h2>un subtitulo {{ $t('homePage.wellcome') }}</h2>
       <SelectLocale />
