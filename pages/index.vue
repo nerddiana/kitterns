@@ -7,6 +7,8 @@
       <h1 class="title">kitterns</h1>
       <h2>un subtitulo</h2>
       <Button label="Call To Acction (go to help)" to="/help" />
+      <p>Valor: {{ valor }}</p>
+      <Input v-model="valor" placeholder="un input" />
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -30,7 +32,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      valor: String,
+    }
+  },
+  methods: {
+    onInput(e) {
+      console.log('onInput e: ', e)
+    },
+  },
+}
 </script>
 
 <style lang="scss">
