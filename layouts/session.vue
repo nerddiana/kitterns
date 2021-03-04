@@ -1,8 +1,5 @@
 <template>
   <div>
-    <Header />
     <Nuxt />
-    <Footer />
-    <MobileMenu />
   </div>
 </template>
