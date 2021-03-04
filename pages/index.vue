@@ -35,7 +35,7 @@
 export default {
   data() {
     return {
-      valor: String,
+      valor: '',
     }
   },
   methods: {
