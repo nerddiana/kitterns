@@ -5,7 +5,8 @@
       <img src="@/assets/img/imagen.jpeg" />
       <img src="https://cde.laprensa.e3.pe/ima/0/0/2/3/8/238082.jpg" /-->
       <h1 class="title">kitterns</h1>
-      <h2>un subtitulo</h2>
+      <h2>un subtitulo {{ $t('homePage.wellcome') }}</h2>
+      <SelectLocale />
       <Button label="Call To Acction (go to help)" to="/help" />
       <p>Valor: {{ valor }}</p>
       <Input v-model="valor" placeholder="un input" />

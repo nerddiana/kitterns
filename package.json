@@ -25,6 +25,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
+    "nuxt-i18n": "^6.20.4",
     "sass-loader": "10"
   },
   "devDependencies": {
