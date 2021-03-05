@@ -83,6 +83,6 @@ export default {
 
 <style lang="scss">
 .header {
-  @apply sticky inset-x-0 top-0 w-screen bg-white  p-4 shadow-md;
+  @apply sticky box-border inset-x-0 top-0 w-full bg-white  p-4 shadow-md;
 }
 </style>
