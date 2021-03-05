@@ -48,11 +48,12 @@
     <section class="p-6">banner oferta</section>
 
     <section class="p-6">
-      <!-- <search-bar /> -->
-      <!-- <productcard
-        prod-desc="culo culo culo culo culo culo culo culo Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere repellat eligendi eum."
-        prod-name="Nombre del producto"
-      /> -->
+      <EditDebitCard
+        holder-name="Jane Doe"
+        card-number="**** **** **** 4444"
+        :button-left="$t('buttons.delete')"
+        :button-right="$t('buttons.edit')"
+      />
     </section>
 
     <template>
@@ -70,25 +71,13 @@
         >
           <div class="flex flex-nowrap">
             <div class="inline-block mr-6">
-              <productcard
-                prod-desc="culo culo culo culo culo culo culo culo Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere repellat eligendi eum."
-                prod-name="Nombre del producto"
-                product-id="1"
-              />
+              <productcard />
             </div>
             <div class="inline-block mr-6">
-              <productcard
-                prod-desc="culo culo culo culo culo culo culo culo Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere repellat eligendi eum."
-                prod-name="Nombre del producto"
-                product-id="2"
-              />
+              <productcard />
             </div>
             <div class="inline-block mr-6">
-              <productcard
-                prod-desc="culo culo culo culo culo culo culo culo Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere repellat eligendi eum."
-                prod-name="Nombre del producto"
-                product-id="3"
-              />
+              <productcard />
             </div>
             <div class="list-end-spacer"></div>
           </div>

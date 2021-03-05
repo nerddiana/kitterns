@@ -29,4 +29,9 @@ export default {
       },
     },
   },
+  buttons: {
+    delete: 'Eliminar',
+    add: 'Agregar',
+    edit: 'Editar',
+  },
 }
