@@ -3,7 +3,7 @@
     <Header />
     <Nuxt />
     <Footer />
-    <MobileMenu />
-    <SideMenu />
+    <MobileMenu v-if="$device.isMobile" />
+    <SideMenu v-if="!$device.isDesktop" />
   </div>
 </template>
