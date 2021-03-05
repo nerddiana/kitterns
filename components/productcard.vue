@@ -1,10 +1,9 @@
 <template>
   <nuxt-link :to="`/products/${productId}`">
     <div class="pCard max-w-xs overflow-hidden shadow-lg my-2">
-      <img
-        class="w-full card-img"
-        :src="imageUrl"
-        alt="Sunset in the mountains"
+      <div
+        class="w-full card-img aspect-w-6 aspect-h-4 bg-cover bg-center"
+        :style="`background-image: url(${imageUrl})`"
       />
       <div class="px-6 py-4 pb-0">
         <div class="font-bold text-lg mb-2">{{ name }}</div>
@@ -66,8 +65,8 @@ export default {
       default: '',
     },
     image: {
-      type: String,
-      default: '',
+      type: Object,
+      default: () => ({}),
     },
     name: {
       type: String,
