@@ -63,9 +63,11 @@
     </template>
 
     <template class="product-cards">
-      <section class="container">
-        <h2 class="mb-4 h2-b">¡OFERTAS!</h2>
-        <div class="overflow-x-scroll overflow-hidden pb-10 hide-scroll-bar">
+      <section>
+        <h2 class="px-6 mb-4 h2-b">¡OFERTAS!</h2>
+        <div
+          class="overflow-x-scroll overflow-hidden px-6 pb-10 hide-scroll-bar"
+        >
           <div class="flex flex-nowrap">
             <div class="inline-block mr-6">
               <productcard
@@ -85,6 +87,7 @@
                 prod-name="Nombre del producto"
               />
             </div>
+            <div class="list-end-spacer"></div>
           </div>
         </div>
       </section>
@@ -92,9 +95,9 @@
 
     <template>
       <div class="">
-        <section class="container">
-          <h2 class="mb-4 h2-b">Categorías</h2>
-          <div class="overflow-x-scroll pb-10 hide-scroll-bar">
+        <section>
+          <h2 class="mb-4 px-6 h2-b">Categorías</h2>
+          <div class="overflow-x-scroll px-6 pb-10 hide-scroll-bar">
             <div class="flex flex-nowrap">
               <div class="inline-block mr-6">
                 <card-categorie card-text="Juegos y juguetes" />
@@ -111,6 +114,7 @@
               <div class="inline-block mr-6">
                 <card-categorie card-text="Productos de oficina" />
               </div>
+              <div class="list-end-spacer"></div>
             </div>
           </div>
         </section>
@@ -146,6 +150,14 @@ export default {
 
 section.container {
   @apply px-8 py-4;
+}
+
+.list-end-spacer {
+  display: block;
+  width: 1px;
+  height: 1px;
+  background-color: transparent;
+  border: 1px solid transparent;
 }
 
 .links {
