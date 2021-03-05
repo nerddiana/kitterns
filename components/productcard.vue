@@ -4,17 +4,30 @@
     <div class="px-6 py-4 pb-0">
       <div class="font-bold text-lg mb-2">{{ name }}</div>
       <p class="description text-grey-darker text-sm">{{ description }}</p>
+      <p>mult: {{ $store.state.currencyValue.currencyMultipler }}</p>
     </div>
     <div class="px-6 py-4 flex justify-between items-center">
       <div>
         <p class="text-alert text-xs uppercase">
-          {{ $t('components.productCard.lastPriceLabel') }} ${{
-            lastPrice | currency($t('globals.currencyCode'))
+          {{ $t('components.productCard.lastPriceLabel') }}
+          {{
+            lastPrice
+              | asCurrency(
+                $t('globals.currencyCode'),
+                $store.state.currencyValue.currencyMultipler
+              )
+              | currency
           }}
         </p>
         <p class="font-extrabold">
-          {{ $t('globals.currencyCode') }} ${{
-            currentPrice | currency($t('globals.currencyCode'))
+          {{ $t('globals.currencyCode') }}
+          {{
+            currentPrice
+              | asCurrency(
+                $t('globals.currencyCode'),
+                $store.state.currencyValue.currencyMultipler
+              )
+              | currency
           }}
         </p>
       </div>
@@ -36,9 +49,8 @@
 <script>
 export default {
   filters: {
-    currency(mount, code) {
-      const result = code === 'USD' ? mount * 20 : mount
-      return result
+    asCurrency(mount, code, multipler) {
+      return code === 'USD' ? mount * multipler : mount
     },
   },
   props: {

@@ -41,6 +41,7 @@ export default {
     '@nuxtjs/pwa',
     'nuxt-i18n',
     'nuxt-webfontloader',
+    'vue-currency-filter/nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -79,6 +80,17 @@ export default {
         'Roboto:100,200,300,400,500,600,700,800,900',
       ], // Loads Lato font with weights 400 and 700
     },
+  },
+
+  currencyFilter: {
+    // default name 'currency'
+    symbol: '$',
+    thousandsSeparator: ',',
+    fractionCount: 2,
+    fractionSeparator: '.',
+    symbolPosition: 'front',
+    symbolSpacing: true,
+    avoidEmptyDecimals: undefined,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
