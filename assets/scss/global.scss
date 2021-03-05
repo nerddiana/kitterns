@@ -1,10 +1,7 @@
 body {
 	/* background-color: #e5e5e5; */
-	@apply bg-white;
-	
-	font-family: poppins, sans-serif;
-	color: #080708;
-	box-sizing: border-box;
+
+	@apply bg-white font-poppins text-primary-black box-border;
 }
 // containers
 .btn-container {
