@@ -4,7 +4,6 @@
     <div class="px-6 py-4 pb-0">
       <div class="font-bold text-lg mb-2">{{ name }}</div>
       <p class="description text-grey-darker text-sm">{{ description }}</p>
-      <p>mult: {{ $store.state.currencyValue.currencyMultipler }}</p>
     </div>
     <div class="px-6 py-4 flex justify-between items-center">
       <div>
