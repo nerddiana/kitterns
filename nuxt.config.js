@@ -40,6 +40,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     'nuxt-i18n',
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -71,6 +72,15 @@ export default {
     },
   },
 
+  webfontloader: {
+    google: {
+      families: [
+        'Poppins:100,200,300,400,500,600,700,800,900',
+        'Roboto:100,200,300,400,500,600,700,800,900',
+      ], // Loads Lato font with weights 400 and 700
+    },
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     // Eslint auto fix
@@ -91,5 +101,5 @@ export default {
 
   server: {
     host: '0.0.0.0',
-  }
+  },
 }

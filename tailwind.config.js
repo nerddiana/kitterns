@@ -3,6 +3,10 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins'],
+        roboto: ['Roboto'],
+      },
       colors: {
         primary: defaultTheme.colors.green,
         'primary-black': '#080708',
