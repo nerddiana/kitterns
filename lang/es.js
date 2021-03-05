@@ -33,5 +33,7 @@ export default {
     delete: 'Eliminar',
     add: 'Agregar',
     edit: 'Editar',
+    signUp: 'Regístrate',
+    logIn: 'Inicia sesión',
   },
 }

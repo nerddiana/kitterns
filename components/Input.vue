@@ -1,10 +1,10 @@
 <template>
-  <label class="w-full flex flex-col space-y4">
+  <label class="w-full flex flex-col space-y-2">
     <span class="h4-b mb-2 focus:ring-2 focus:ring-blue-600">
       {{ label }}
     </span>
     <input
-      class="h-full mt-1 rounded-lg shadow-sm border-gray-300 border p-4"
+      class="h-full mt-1 rounded-lg focus:border-purple shadow-sm border-gray-300 border p-4"
       v-bind="$attrs"
       :value="value"
       v-on="inputListeners"
@@ -15,7 +15,7 @@
 <script>
 export default {
   inheritAttrs: false,
-  props: ['label', 'value', 'labelText'],
+  props: ['label', 'value'],
   computed: {
     inputListeners() {
       const vm = this
