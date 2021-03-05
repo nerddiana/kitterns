@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 .side-menu-cover {
-  @apply absolute top-0 left-0 w-screen h-screen bg-sidebarcover transform duration-300 ease-in-out;
+  @apply fixed top-0 left-0 w-screen h-screen bg-sidebarcover transform duration-300 ease-in-out;
 }
 
 .side-menu {
