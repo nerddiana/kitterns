@@ -15,33 +15,6 @@
     <payment-cards />
     <ContactForm class="mt-8" />
 
-    <!-- <div class="form grid">
-      <div class="mt-6">
-        <input-form type="text" holder-text="Jane Doe" label-text="Nombre" />
-      </div>
-      <div class="mt-6">
-        <input-form
-          type="email"
-          holder-text="janedoe@example.com"
-          label-text="Correo electrónico"
-        />
-      </div>
-      <div class="mt-6">
-        <input-form type="text" holder-text="" label-text="Asunto" />
-      </div>
-      <div class="mt-6">
-        <input-form
-          type="text"
-          holder-text="Tu mensaje aquí"
-          label-text="Mensaje"
-        />
-      </div>
-      <button
-        class="btn-send text-lg font-extrabold text-purple mt-6 uppercase w-full py-4 px-2 bg-white border-2 border-purple"
-      >
-        enviar
-      </button>
-    </div> -->
     <div class="text-center">
       <h2 class="h2-b mt-16 uppercase">{{ $t('contactForm.meet') }}</h2>
       <!-- <div class="flex mt-12 mb-12 w-full justify-center flex-col"> -->

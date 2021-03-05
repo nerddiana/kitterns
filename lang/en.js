@@ -29,4 +29,9 @@ export default {
       },
     },
   },
+  buttons: {
+    delete: 'Delete',
+    add: 'Add new',
+    edit: 'Edit',
+  },
 }
