@@ -8,7 +8,9 @@
       />
       <div class="px-6 py-4 pb-0">
         <div class="font-bold text-lg mb-2">{{ name }}</div>
-        <p class="description text-grey-darker text-sm">{{ description }}</p>
+        <p class="description text-grey-darker text-sm">
+          {{ description }}
+        </p>
       </div>
       <div class="px-6 py-4 flex justify-between items-center">
         <div>
@@ -94,7 +96,9 @@ export default {
   },
   computed: {
     imageUrl() {
-      return this.image || 'https://placehold.it/500x500'
+      return Array.isArray(this.image.list) && this.image.list.length
+        ? this.image.list[0].src || 'https://placehold.it/500x500'
+        : 'https://placehold.it/500x500'
     },
   },
 }

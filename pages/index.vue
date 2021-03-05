@@ -77,7 +77,7 @@
             >
               <productcard
                 :product-id="product.id"
-                :image="product.images ? product.images[0] : null"
+                :image="product.images"
                 :name="product.name"
                 :description="product.description"
                 :last-price="product.last_price"
@@ -128,8 +128,9 @@ import CardCategorie from '~/components/card-categorie.vue'
 export default {
   apollo: {
     products: gql`
-      query MyQuery {
+      query getProducts {
         products(limit: 10) {
+          images
           name
           stock
           description
