@@ -8,7 +8,7 @@
 <script>
 export default {
   inheritAttrs: false,
-  props: ['label', 'value'],
+  props: ['label', 'value', 'labelText'],
   computed: {
     inputListeners() {
       const vm = this
