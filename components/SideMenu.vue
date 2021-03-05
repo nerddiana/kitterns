@@ -13,7 +13,7 @@
         'sidebar-animation': !showNow,
       }"
     >
-      Side menu
+      <SideMenuContent />
     </div>
   </div>
 </template>

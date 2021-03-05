@@ -55,6 +55,7 @@ export default {
   },
 
   i18n: {
+    parsePages: false,
     locales: [
       {
         code: 'en',

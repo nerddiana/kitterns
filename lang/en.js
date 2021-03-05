@@ -8,7 +8,7 @@ export default {
   },
   contactForm: {
     name: 'Full Name',
-    mail: 'Email',
+    email: 'Email',
     subject: 'Subject',
     message: 'Message',
     meet: 'Lets get in touch',

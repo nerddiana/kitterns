@@ -5,7 +5,7 @@
   >
     <div class="bottom-selector-content">
       <template v-for="option in options">
-        <nuxt-link :key="option.label" :to="option.path">
+        <nuxt-link :key="option.label" :to="localePath(option.path)">
           <div class="option">
             <img
               class="icon"

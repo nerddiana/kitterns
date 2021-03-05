@@ -1,19 +1,19 @@
 <template>
   <div class="mobile-menu items-center text-center">
     <div class="flex justify-between text-center">
-      <nuxt-link to="/">
+      <nuxt-link :to="localePath('/')">
         <div class="option">
           <img class="icon" src="@/assets/icons/home.svg" alg="icon home" />
           <p class="menuP">Inicio</p>
         </div>
       </nuxt-link>
-      <nuxt-link to="/search">
+      <nuxt-link :to="localePath('/search')">
         <div class="option">
           <img class="icon" src="@/assets/icons/search.svg" alg="icon search" />
           <p class="menuP">Buscar</p>
         </div>
       </nuxt-link>
-      <nuxt-link to="/orders">
+      <nuxt-link :to="localePath('/orders')">
         <div class="option">
           <img class="icon" src="@/assets/icons/truck.svg" alg="icon truck" />
           <p class="menuP">Pedidos</p>
