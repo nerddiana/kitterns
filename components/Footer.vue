@@ -11,9 +11,11 @@
         <li><a href="#">Política de devoluciones</a></li>
       </ul>
     </div>
+
     <payment-cards />
-    <h2 class="h2-b mt-6">¿Cómo podemos ayudarte?</h2>
-    <div class="form grid">
+    <ContactForm class="mt-8" />
+
+    <!-- <div class="form grid">
       <div class="mt-6">
         <input-form type="text" holder-text="Jane Doe" label-text="Nombre" />
       </div>
@@ -39,9 +41,9 @@
       >
         enviar
       </button>
-    </div>
+    </div> -->
     <div class="text-center">
-      <h2 class="h2-b mt-16 uppercase">Conócenos</h2>
+      <h2 class="h2-b mt-16 uppercase">{{ $t('contactForm.meet') }}</h2>
       <!-- <div class="flex mt-12 mb-12 w-full justify-center flex-col"> -->
       <div class="container">
         <div class="p-6 w-64 flex justify-between">
@@ -60,7 +62,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style scope lang="scss">
 .footer {
   @apply bg-white shadow-md border border-gray-300;
 }

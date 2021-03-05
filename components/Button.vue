@@ -1,5 +1,8 @@
 <template>
-  <button @click="onClick">
+  <button
+    class="button-send rounded-lg px-8 py-2 uppercase border-purple border-2"
+    @click="onClick"
+  >
     {{ label }}
   </button>
 </template>
@@ -28,8 +31,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
-button {
-  @apply border rounded-lg px-4 py-2;
+<style scope lang="scss">
+.button-send {
+  @apply font-bold text-purple;
+
+  border-radius: 8px 0;
 }
 </style>
