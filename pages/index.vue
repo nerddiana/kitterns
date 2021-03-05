@@ -73,18 +73,21 @@
               <productcard
                 prod-desc="culo culo culo culo culo culo culo culo Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere repellat eligendi eum."
                 prod-name="Nombre del producto"
+                product-id="1"
               />
             </div>
             <div class="inline-block mr-6">
               <productcard
                 prod-desc="culo culo culo culo culo culo culo culo Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere repellat eligendi eum."
                 prod-name="Nombre del producto"
+                product-id="2"
               />
             </div>
             <div class="inline-block mr-6">
               <productcard
                 prod-desc="culo culo culo culo culo culo culo culo Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere repellat eligendi eum."
                 prod-name="Nombre del producto"
+                product-id="3"
               />
             </div>
             <div class="list-end-spacer"></div>

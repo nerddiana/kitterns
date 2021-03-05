@@ -1,7 +1,7 @@
 <template>
   <div
     class="bottom-selector"
-    :class="{ 'bottom-selector-animation': showSelector }"
+    :class="{ 'bottom-selector-animation': !showSelector }"
   >
     <div class="bottom-selector-content">
       <template v-for="option in options">

@@ -1,48 +1,50 @@
 <template>
-  <div class="pCard max-w-xs overflow-hidden shadow-lg my-2">
-    <img class="w-full card-img" :src="image" alt="Sunset in the mountains" />
-    <div class="px-6 py-4 pb-0">
-      <div class="font-bold text-lg mb-2">{{ name }}</div>
-      <p class="description text-grey-darker text-sm">{{ description }}</p>
-    </div>
-    <div class="px-6 py-4 flex justify-between items-center">
-      <div>
-        <p class="text-alert text-xs uppercase">
-          {{ $t('components.productCard.lastPriceLabel') }}
-          {{
-            lastPrice
-              | asCurrency(
-                $t('globals.currencyCode'),
-                $store.state.currencyValue.currencyMultipler
-              )
-              | currency
-          }}
-        </p>
-        <p class="font-extrabold">
-          {{ $t('globals.currencyCode') }}
-          {{
-            currentPrice
-              | asCurrency(
-                $t('globals.currencyCode'),
-                $store.state.currencyValue.currencyMultipler
-              )
-              | currency
-          }}
-        </p>
+  <nuxt-link :to="`/products/${productId}`">
+    <div class="pCard max-w-xs overflow-hidden shadow-lg my-2">
+      <img class="w-full card-img" :src="image" alt="Sunset in the mountains" />
+      <div class="px-6 py-4 pb-0">
+        <div class="font-bold text-lg mb-2">{{ name }}</div>
+        <p class="description text-grey-darker text-sm">{{ description }}</p>
       </div>
-      <div>
-        <div class="flex">
-          <span v-for="star in stars" :key="star">
-            <img src="@/assets/icons/star.svg" alt="icon star" />
-          </span>
+      <div class="px-6 py-4 flex justify-between items-center">
+        <div>
+          <p class="text-alert text-xs uppercase">
+            {{ $t('components.productCard.lastPriceLabel') }}
+            {{
+              lastPrice
+                | asCurrency(
+                  $t('globals.currencyCode'),
+                  $store.state.currencyValue.currencyMultipler
+                )
+                | currency
+            }}
+          </p>
+          <p class="font-extrabold">
+            {{ $t('globals.currencyCode') }}
+            {{
+              currentPrice
+                | asCurrency(
+                  $t('globals.currencyCode'),
+                  $store.state.currencyValue.currencyMultipler
+                )
+                | currency
+            }}
+          </p>
         </div>
-        <p>{{ votes }} {{ $t('components.productCard.votes') }}</p>
+        <div>
+          <div class="flex">
+            <span v-for="star in stars" :key="star">
+              <img src="@/assets/icons/star.svg" alt="icon star" />
+            </span>
+          </div>
+          <p>{{ votes }} {{ $t('components.productCard.votes') }}</p>
+        </div>
       </div>
+      <!--div class="px-6 pb-6 flex text-center">
+        <btn-primary class="px-6 py-4" btn-value="agregar al carrito" />
+      </div-->
     </div>
-    <div class="px-6 pb-6 flex text-center">
-      <btn-primary class="px-6 py-4" btn-value="agregar al carrito" />
-    </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -53,6 +55,10 @@ export default {
     },
   },
   props: {
+    productId: {
+      type: String,
+      default: '',
+    },
     image: {
       type: String,
       default:
