@@ -1,5 +1,29 @@
 body {
 	/* background-color: #e5e5e5; */
-	@apply bg-gray-100;
-
+	@apply bg-white;
+	
+	font-family: poppins, sans-serif;
+	color: #080708;
 }
+// containers
+.btn-container {
+	@apply flex justify-center;
+  }
+  
+//   texts
+  .title {
+	@apply text-yellow text-lg text-center font-bold text-4xl leading-none align-middle;
+  }
+  
+  .subtitle {
+	@apply my-3 text-white font-semibold text-lg text-center;
+  }
+
+.h2-b{
+	@apply font-bold text-2xl;
+}
+.h4-b{
+	@apply font-bold leading-none;
+}
+
+// paddings
