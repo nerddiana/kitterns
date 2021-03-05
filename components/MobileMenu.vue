@@ -20,16 +20,27 @@
         </div>
       </nuxt-link>
       <div>
-        <div class="option">
+        <button class="option" @click="toggleShowSelector">
           <img class="icon" src="@/assets/icons/user.svg" alg="icon user" />
           <p class="menuP">Mi cuenta</p>
-        </div>
+        </button>
       </div>
     </div>
+    <BottomSelector />
   </div>
 </template>
 
-<style lang="scss">
+<script>
+import { mapMutations } from 'vuex'
+
+export default {
+  methods: {
+    ...mapMutations('bottomSelector', ['toggleShowSelector']),
+  },
+}
+</script>
+
+<style lang="scss" scoped>
 .mobile-menu {
   @apply sticky inset-x-0 bottom-0 w-screen bg-white p-2;
 

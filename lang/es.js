@@ -18,5 +18,15 @@ export default {
       lastPriceLabel: 'Anterior',
       votes: 'votos',
     },
+    bottomSelector: {
+      accountData: 'Datos de la cuenta',
+      personalData: 'Datos personales',
+      paymentMethods: 'Métodos de pago',
+      adresses: 'Direcciones',
+      admin: {
+        products: 'Administración de productos',
+        users: 'Administración de usuarios',
+      },
+    },
   },
 }

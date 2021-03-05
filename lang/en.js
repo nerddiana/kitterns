@@ -18,5 +18,15 @@ export default {
       lastPriceLabel: 'Last',
       votes: 'votes',
     },
+    bottomSelector: {
+      accountData: 'Accound data',
+      personalData: 'Personal data',
+      paymentMethods: 'Payment methods',
+      adresses: 'Adresses',
+      admin: {
+        products: 'Products',
+        users: 'Users',
+      },
+    },
   },
 }

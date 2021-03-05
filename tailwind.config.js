@@ -26,6 +26,7 @@ module.exports = {
       },
       translate: {
         sidebar: '-300px',
+        full: '100%',
       },
     },
   },

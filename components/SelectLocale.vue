@@ -27,3 +27,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.locale-changer {
+  @apply mr-4;
+}
+</style>
