@@ -37,10 +37,10 @@
   <div>
     <section class="hero">
       <div>
-        <h1 class="title">¡MESES SIN INTERESES!</h1>
+        <h1 class="title">{{ $t('homePage.soldOut') }}</h1>
         <h2 class="subtitle">¡MESES SIN INTERESES!</h2>
         <div class="btn-container">
-          <btn-small btn-text="productos" />
+          <btn-small :btn-text="$t('homePage.soldOut')" />
         </div>
       </div>
     </section>
@@ -147,24 +147,6 @@ export default {
 section.container {
   @apply px-8 py-4;
 }
-
-// .title {
-//   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-//     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-//   display: block;
-//   font-weight: 300;
-//   font-size: 100px;
-//   color: #35495e;
-//   letter-spacing: 1px;
-// }
-
-// .subtitle {
-//   font-weight: 300;
-//   font-size: 42px;
-//   color: #526488;
-//   word-spacing: 5px;
-//   padding-bottom: 15px;
-// }
 
 .links {
   padding-top: 15px;
