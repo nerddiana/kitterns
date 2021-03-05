@@ -42,7 +42,26 @@ export default {
     'nuxt-i18n',
     'nuxt-webfontloader',
     'vue-currency-filter/nuxt',
+    '@nuxtjs/apollo',
   ],
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://kitterns-api.hasura.app/v1/graphql',
+        tokenName: 'apollo-token',
+        persisting: false,
+      },
+    },
+    defaultOptions: {
+      // See 'apollo' definition
+      // For example: default query options
+      $query: {
+        loadingKey: 'loading',
+        fetchPolicy: 'cache-and-network',
+      },
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

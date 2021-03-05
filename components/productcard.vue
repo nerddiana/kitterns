@@ -1,7 +1,11 @@
 <template>
   <nuxt-link :to="`/products/${productId}`">
     <div class="pCard max-w-xs overflow-hidden shadow-lg my-2">
-      <img class="w-full card-img" :src="image" alt="Sunset in the mountains" />
+      <img
+        class="w-full card-img"
+        :src="imageUrl"
+        alt="Sunset in the mountains"
+      />
       <div class="px-6 py-4 pb-0">
         <div class="font-bold text-lg mb-2">{{ name }}</div>
         <p class="description text-grey-darker text-sm">{{ description }}</p>
@@ -61,8 +65,7 @@ export default {
     },
     image: {
       type: String,
-      default:
-        'https://images.unsplash.com/photo-1591635566278-10dca0ca76ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+      default: '',
     },
     name: {
       type: String,
@@ -70,8 +73,7 @@ export default {
     },
     description: {
       type: String,
-      default:
-        'Lorem ipsum dolor sit amet., lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.',
+      default: 'Este producto no tiene descripción.',
     },
     lastPrice: {
       type: Number,
@@ -88,6 +90,11 @@ export default {
     votes: {
       type: Number,
       default: 0,
+    },
+  },
+  computed: {
+    imageUrl() {
+      return this.image || 'https://placehold.it/500x500'
     },
   },
 }

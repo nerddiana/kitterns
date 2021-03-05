@@ -70,14 +70,21 @@
           class="overflow-x-scroll overflow-hidden px-6 pb-10 hide-scroll-bar"
         >
           <div class="flex flex-nowrap">
-            <div class="inline-block mr-6">
-              <productcard />
-            </div>
-            <div class="inline-block mr-6">
-              <productcard />
-            </div>
-            <div class="inline-block mr-6">
-              <productcard />
+            <div
+              v-for="product in products"
+              :key="product.id"
+              class="inline-block mr-6"
+            >
+              <productcard
+                :product-id="product.id"
+                :image="product.images ? product.images[0] : null"
+                :name="product.name"
+                :description="product.description"
+                :last-price="product.last_price"
+                :current-price="product.current_price"
+                :stars="product.stars"
+                :votes="product.votes"
+              />
             </div>
             <div class="list-end-spacer"></div>
           </div>
@@ -116,8 +123,25 @@
 </template>
 
 <script>
+import gql from 'graphql-tag'
 import CardCategorie from '~/components/card-categorie.vue'
 export default {
+  apollo: {
+    products: gql`
+      query MyQuery {
+        products(limit: 10) {
+          name
+          stock
+          description
+          current_price
+          id
+          last_price
+          stars
+          votes
+        }
+      }
+    `,
+  },
   data() {
     return {
       valor: CardCategorie,
