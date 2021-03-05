@@ -1,37 +1,30 @@
 <template>
   <div class="pCard max-w-xs overflow-hidden shadow-lg my-2">
-    <img
-      class="w-full card-img"
-      src="https://images.unsplash.com/photo-1591635566278-10dca0ca76ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-      alt="Sunset in the mountains"
-    />
+    <img class="w-full card-img" :src="image" alt="Sunset in the mountains" />
     <div class="px-6 py-4 pb-0">
-      <div class="font-bold text-lg mb-2">{{ prodName }}</div>
-      <p class="description text-grey-darker text-sm">{{ prodDesc }}</p>
+      <div class="font-bold text-lg mb-2">{{ name }}</div>
+      <p class="description text-grey-darker text-sm">{{ description }}</p>
     </div>
     <div class="px-6 py-4 flex justify-between items-center">
       <div>
-        <p class="text-alert text-xs uppercase">antes 200</p>
-        <p class="font-extrabold">MXN$100</p>
+        <p class="text-alert text-xs uppercase">
+          {{ $t('components.productCard.lastPriceLabel') }} ${{
+            lastPrice | currency($t('globals.currencyCode'))
+          }}
+        </p>
+        <p class="font-extrabold">
+          {{ $t('globals.currencyCode') }} ${{
+            currentPrice | currency($t('globals.currencyCode'))
+          }}
+        </p>
       </div>
-      <div class="votes">
-        <div>
-          <span
-            ><svg
-              width="16"
-              height="17"
-              viewBox="0 0 16 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.00016 1.5835L10.0602 5.75683L14.6668 6.43016L11.3335 9.67683L12.1202 14.2635L8.00016 12.0968L3.88016 14.2635L4.66683 9.67683L1.3335 6.43016L5.94016 5.75683L8.00016 1.5835Z"
-                fill="#FFDA02"
-              />
-            </svg>
+      <div>
+        <div class="flex">
+          <span v-for="star in stars" :key="star">
+            <img src="@/assets/icons/star.svg" alt="icon star" />
           </span>
-          <p>votos</p>
         </div>
+        <p>{{ votes }} {{ $t('components.productCard.votes') }}</p>
       </div>
     </div>
     <div class="px-6 pb-6 flex text-center">
@@ -42,7 +35,44 @@
 
 <script>
 export default {
-  props: ['prodName', 'prodDesc'],
+  filters: {
+    currency(mount, code) {
+      const result = code === 'USD' ? mount * 20 : mount
+      return result
+    },
+  },
+  props: {
+    image: {
+      type: String,
+      default:
+        'https://images.unsplash.com/photo-1591635566278-10dca0ca76ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    },
+    name: {
+      type: String,
+      default: 'Nombre del producto',
+    },
+    description: {
+      type: String,
+      default:
+        'Lorem ipsum dolor sit amet., lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.',
+    },
+    lastPrice: {
+      type: Number,
+      default: 0.5,
+    },
+    currentPrice: {
+      type: Number,
+      default: 1.0,
+    },
+    stars: {
+      type: Number,
+      default: 3,
+    },
+    votes: {
+      type: Number,
+      default: 0,
+    },
+  },
 }
 </script>
 
@@ -60,5 +90,9 @@ export default {
 .description {
   line-height: 1.25;
   font-size: 0.75rem;
+}
+
+.stars span {
+  @apply inline;
 }
 </style>

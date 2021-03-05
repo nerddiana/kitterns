@@ -1,4 +1,7 @@
 export default {
+  globals: {
+    currencyCode: 'MXN',
+  },
   homePage: {
     wellcome: 'Bienvenide',
     soldOut: '¡MESES SIN INTERESES!',
@@ -9,5 +12,11 @@ export default {
     subject: 'Asunto',
     message: 'Mensaje',
     meet: 'Conócenos',
+  },
+  components: {
+    productCard: {
+      lastPriceLabel: 'Anterior',
+      votes: 'votos',
+    },
   },
 }
