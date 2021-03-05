@@ -137,7 +137,7 @@
 
 <style lang="scss">
 .mobile-menu {
-  @apply sticky inset-x-0 bottom-0 w-screen bg-white  p-2;
+  @apply sticky inset-x-0 bottom-0 w-screen bg-white p-2;
 
   box-shadow: 0 -5px 5px -5px #cdcdcd;
 }

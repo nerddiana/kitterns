@@ -1,7 +1,7 @@
 <template>
   <header class="header py-2 px-4 flex items-center justify-between">
     <div class="flex">
-      <button class="h-6 w-6">
+      <button class="h-6 w-6" @click="toggleShowSidebar">
         <svg
           class="h-6 w-6"
           viewBox="0 0 24 24"
@@ -70,6 +70,16 @@
     </div>
   </header>
 </template>
+
+<script>
+import { mapMutations } from 'vuex'
+
+export default {
+  methods: {
+    ...mapMutations('sidebar', ['toggleShowSidebar']),
+  },
+}
+</script>
 
 <style lang="scss">
 .header {

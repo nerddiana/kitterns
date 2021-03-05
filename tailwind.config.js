@@ -18,6 +18,15 @@ module.exports = {
         pink: '#FFA9F1',
         alert: '#F30530',
       },
+      backgroundColor: (theme) => ({
+        sidebarcover: 'rgba(0, 0, 0, 0.75)',
+      }),
+      width: {
+        sidebar: '300px',
+      },
+      translate: {
+        sidebar: '-300px',
+      },
     },
   },
 }

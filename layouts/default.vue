@@ -4,5 +4,6 @@
     <Nuxt />
     <Footer />
     <MobileMenu />
+    <SideMenu />
   </div>
 </template>
