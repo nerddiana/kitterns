@@ -12,6 +12,10 @@ export default {
     subject: 'Subject',
     message: 'Message',
     meet: 'Lets get in touch',
+    chngPsw: 'Change Password',
+    Psw: 'Password',
+    newPsw: 'New Password',
+    confirmNewPsw: 'Confirm new password',
   },
   components: {
     productCard: {
@@ -36,5 +40,18 @@ export default {
     delete: 'Delete',
     add: 'Add new',
     edit: 'Edit',
+    signUp: 'Sign Up',
+    logIn: 'Log in',
+  },
+  access: {
+    welcomeBack: 'Welcome back! We`re glad to see you again',
+    welcome: 'Welcome, thank you for choosing us!',
+    wrongPss: 'Incorrect Pasword',
+    lowercase: 'One lowercase',
+    uppercase: 'One uppercase',
+    character: 'At least 8 characters',
+  },
+  alerts: {
+    // welcomeBack: 'Welcome back! We`re glad to see you again',
   },
 }

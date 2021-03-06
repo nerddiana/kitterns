@@ -1,6 +1,6 @@
 <template>
   <a
-    class="btn-prim hover:-translate-y-1 hover:scale-110 transition duration-500 ease-in-out text-center text-sm uppercase px-8 py-2 font-extrabold text-white bg-purple w-full"
+    class="btn-prim w-full hover:-translate-y-1 hover:scale-110 transition duration-500 ease-in-out text-center text-sm uppercase px-12 py-4 font-extrabold text-white bg-purple"
     href="#"
   >
     {{ btnValue }}
