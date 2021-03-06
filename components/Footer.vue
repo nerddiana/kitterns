@@ -3,9 +3,8 @@
     <img class="w-24" src="../assets/img/logo.svg" alt="" />
     <div class="mt-6">
       <h2 class="h2-b">Menú</h2>
-      <ul>
+      <ul class="underline flex">
         <li><a href="#">Categorías</a></li>
-        <li><a href="#">Nosotros</a></li>
         <li><a href="#">Rastrear pedidos</a></li>
         <li><a href="#">Política de cookies</a></li>
         <li><a href="#">Política de devoluciones</a></li>
@@ -15,19 +14,25 @@
     <payment-cards />
     <ContactForm class="mt-8" />
 
-    <div class="text-center">
-      <h2 class="h2-b mt-16 uppercase">{{ $t('contactForm.meet') }}</h2>
-      <!-- <div class="flex mt-12 mb-12 w-full justify-center flex-col"> -->
-      <div class="container">
-        <div class="p-6 w-100 flex justify-between">
+    <div class="text-center flex flex-col justify-center space-y-8">
+      <div>
+        <h2 class="h2-b w-full mt-16 uppercase">
+          {{ $t('contactForm.meet') }}
+        </h2>
+      </div>
+      <div>
+        <div class="flex space-x-12 justify-center">
           <img src="../assets/icons/instagram.svg" alt="" />
           <img src="../assets/icons/facebook.svg" alt="" />
           <img src="../assets/icons/twitter.svg" alt="" />
         </div>
+      </div>
+      <div>
         <div class="about leading-normal w-100">
-          <a class="text-sm underline" href="#">Términos y condiciones</a>
-          <br />
-          <a class="text-sm underline" href="#">Políticas de privacidad</a>
+          <div class="flex justify-center flex-wrap md:space-x-6 text-center">
+            <a class="text-sm underline" href="#">Términos y condiciones</a>
+            <a class="text-sm underline" href="#">Políticas de privacidad</a>
+          </div>
           <p class="text-sm mt-4">© Kitterns 2021</p>
         </div>
       </div>
@@ -37,7 +42,7 @@
 
 <style scope lang="scss">
 .footer {
-  @apply bg-white shadow-md border border-gray-300;
+  @apply bg-white border border-gray-300;
 }
 
 .btn-send {
