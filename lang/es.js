@@ -50,5 +50,6 @@ export default {
     lowercase: 'Una letra minúscula',
     uppercase: 'Una letra mayúscula',
     character: 'Mínimo 8 caracteres',
+    validEmail: 'Por favor ingresa una dirección de correo electrónico válida',
   },
 }

@@ -29,7 +29,7 @@
                 class="h-12 flex content-center"
               />
               <p class="text-alert text-sm">
-                Por favor ingresa una dirección de correo electrónico válida
+                {{ $t('access.validEmail') }}
               </p>
             </div>
             <div class="space-y-8">

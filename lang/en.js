@@ -50,6 +50,7 @@ export default {
     lowercase: 'One lowercase',
     uppercase: 'One uppercase',
     character: 'At least 8 characters',
+    validEmail: 'Please use a valid email account',
   },
   alerts: {
     // welcomeBack: 'Welcome back! We`re glad to see you again',
