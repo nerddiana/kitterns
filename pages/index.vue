@@ -56,33 +56,12 @@
       />
     </section> -->
 
-    <section class="product-cards">
-      >
-      <h2 class="px-6 mb-4 h2-b">¡OFERTAS!</h2>
-      <div class="overflow-x-scroll overflow-hidden px-6 pb-10 hide-scroll-bar">
-        <div class="flex flex-nowrap">
-          <div
-            v-for="product in products"
-            :key="product.id"
-            class="inline-block mr-6"
-          >
-            <productcard
-              :product-id="product.id"
-              :image="product.images"
-              :name="product.name"
-              :description="product.description"
-              :last-price="product.last_price"
-              :current-price="product.current_price"
-              :stars="product.stars"
-              :votes="product.votes"
-            />
-          </div>
-          <div class="list-end-spacer"></div>
-        </div>
-      </div>
+    <section>
+      <!-- <sort-button btn-name="Precio" /> -->
+      <commentinput />
     </section>
 
-    <div class="">
+    <div class="product-cards">
       <section>
         <h2 class="mb-4 px-6 h2-b">Categorías</h2>
         <div class="overflow-x-scroll px-6 pb-10 hide-scroll-bar">
@@ -108,14 +87,39 @@
       </section>
     </div>
 
-    <Footer />
-    <!-- <Footer2 /> -->
+    <div>
+      <div class="">
+        <section>
+          <h2 class="mb-4 px-6 h2-b">Categorías</h2>
+          <div class="overflow-x-scroll px-6 pb-10 hide-scroll-bar">
+            <!--div class="flex flex-nowrap">
+              <div class="inline-block mr-6">
+                <card-categorie card-text="Juegos y juguetes" />
+              </div>
+              <div class="inline-block mr-6">
+                <card-categorie card-text="Boxing kits" />
+              </div>
+              <div class="inline-block mr-6">
+                <card-categorie card-text="Especialidad" />
+              </div>
+              <div class="inline-block mr-6">
+                <card-categorie card-text="Accesorios" />
+              </div>
+              <div class="inline-block mr-6">
+                <card-categorie card-text="Productos de oficina" />
+              </div>
+              <div class="list-end-spacer"></div>
+            </div-->
+          </div>
+        </section>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import gql from 'graphql-tag'
-import CardCategorie from '~/components/card-categorie.vue'
+
 export default {
   apollo: {
     products: gql`
@@ -134,11 +138,6 @@ export default {
       }
     `,
   },
-  data() {
-    return {
-      valor: CardCategorie,
-    }
-  },
   methods: {
     onInput(e) {
       console.log('onInput e: ', e)
@@ -154,10 +153,6 @@ export default {
   @apply flex bg-purple p-4 items-center justify-center align-middle;
 
   min-height: 275px;
-}
-
-section.container {
-  @apply px-8 py-4;
 }
 
 .list-end-spacer {
