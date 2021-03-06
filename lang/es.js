@@ -32,6 +32,9 @@ export default {
         users: 'Administración de usuarios',
       },
     },
+    sideMenuContent: {
+      categoriesLabel: 'Categorías',
+    },
   },
   buttons: {
     delete: 'Eliminar',

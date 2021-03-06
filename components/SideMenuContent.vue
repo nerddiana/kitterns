@@ -1,42 +1,24 @@
 <template>
-  <div class="container flex flex-col align-center">
-    <header class="space-y-12">
-      <div class="mt-12 ml-6">
-        <logo />
-      </div>
-      <div class="nav font-bold space-y-6">
-        <div class="w-full flex flex-col">
-          <a class="p-6 w-full" href="#">
-            {{ $t('menu.about') }}
-          </a>
-          <hr />
-        </div>
-        <div class="w-full flex flex-col">
-          <div class="flex justify-between items-center">
-            <a class="p-6 w-full" href="#">
-              {{ $t('menu.categories') }}
-            </a>
-            <button class="h-full">
-              <img src="../assets/icons/down.svg" alt="" />
-            </button>
-          </div>
-          <hr />
-        </div>
-        <div class="w-full flex flex-col">
-          <a class="p-6 w-full" href="#">
-            {{ $t('menu.about') }}
-          </a>
-          <hr />
-        </div>
-        <div class="w-full flex flex-col">
-          <a class="p-6 w-full" href="#">
-            {{ $t('menu.about') }}
-          </a>
-          <hr />
-        </div>
-      </div>
-    </header>
-    <div class="w-full px-6 py-12 text-center absolute bottom-0 left-0">
+  <div>
+    <div class="mt-6 p-6">
+      <logo />
+    </div>
+    <div class="p-6">
+      <h3 class="text-lg font-bold">
+        {{ $t('components.sideMenuContent.categoriesLabel') }}
+      </h3>
+      <ul>
+        <li
+          v-for="category in categories"
+          :key="category.name"
+          class="border space-y-4"
+          @click="onClick(category)"
+        >
+          {{ category[`label_${$i18n.locale}`] }}
+        </li>
+      </ul>
+    </div>
+    <div class="w-full px-6 py-4 text-center absolute bottom-0 left-0">
       <div class="flex text-center justify-center space-x-6">
         <img src="../assets/icons/instagram.svg" alt="" />
         <img src="../assets/icons/facebook.svg" alt="" />
@@ -45,3 +27,29 @@
     </div>
   </div>
 </template>
+
+<script>
+import gql from 'graphql-tag'
+import { mapMutations } from 'vuex'
+
+export default {
+  apollo: {
+    categories: gql`
+      query MyQuery {
+        categories(order_by: { name: asc }) {
+          label_en
+          label_es
+          name
+        }
+      }
+    `,
+  },
+  methods: {
+    ...mapMutations('sidebar', ['toggleShowSidebar']),
+    onClick(category) {
+      this.$router.push(this.localePath(`/products?category=${category.name}`))
+      this.toggleShowSidebar()
+    },
+  },
+}
+</script>
