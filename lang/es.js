@@ -12,6 +12,10 @@ export default {
     subject: 'Asunto',
     message: 'Mensaje',
     meet: 'Conócenos',
+    chngPsw: 'Cambiar contraseña',
+    Psw: 'Contraseña',
+    newPsw: 'Nueva contraseña',
+    confirmNewPsw: 'Confirmar nueva contraseña',
   },
   components: {
     productCard: {
@@ -35,5 +39,13 @@ export default {
     edit: 'Editar',
     signUp: 'Regístrate',
     logIn: 'Inicia sesión',
+  },
+  access: {
+    welcomeBack: '¡Estamos felices de tenerte de vuelta!',
+    welcome: 'Regístrate para comenzar!',
+    wrongPss: 'La contraseña no es correcta',
+    lowercase: 'Una letra minúscula',
+    uppercase: 'Una letra mayúscula',
+    character: 'Mínimo 8 caracteres',
   },
 }
