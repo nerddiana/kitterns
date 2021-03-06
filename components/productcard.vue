@@ -8,7 +8,7 @@
       <div class="px-6 py-4 pb-0">
         <div class="font-bold text-lg mb-2">{{ name }}</div>
         <p class="description text-grey-darker text-sm">
-          {{ description }}
+          {{ descriptionLimited }}
         </p>
       </div>
       <div class="px-6 py-4 flex justify-between items-center">
@@ -99,6 +99,11 @@ export default {
         ? this.image.list[0].src || 'https://placehold.it/500x500'
         : 'https://placehold.it/500x500'
     },
+    descriptionLimited() {
+      return this.description.length > 120
+        ? this.description.substring(0, 120) + '...'
+        : this.description
+    },
   },
 }
 </script>
@@ -117,6 +122,7 @@ export default {
 .description {
   line-height: 1.25;
   font-size: 0.75rem;
+  height: 4rem;
 }
 
 .stars span {
