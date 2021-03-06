@@ -49,4 +49,8 @@ export default {
     character: 'Mínimo 8 caracteres',
     validEmail: 'Por favor ingresa una dirección de correo electrónico válida',
   },
+  menu: {
+    about: 'Nosotros',
+    categories: 'Categorías',
+  },
 }

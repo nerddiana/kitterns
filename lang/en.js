@@ -49,7 +49,8 @@ export default {
     character: 'At least 8 characters',
     validEmail: 'Please use a valid email account',
   },
-  alerts: {
-    // welcomeBack: 'Welcome back! We`re glad to see you again',
+  menu: {
+    about: 'About us',
+    categories: 'Categories',
   },
 }
