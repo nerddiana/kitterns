@@ -28,6 +28,9 @@ export default {
         users: 'Users',
       },
     },
+    sideMenuContent: {
+      categoriesLabel: 'Categories',
+    },
   },
   buttons: {
     delete: 'Delete',
