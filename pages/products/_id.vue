@@ -1,7 +1,7 @@
 <template>
   <div class="product-view">
     <div v-if="product">
-      <div>{{ product.category }}</div>
+      <div>{{ product.category[`label_${$i18n.locale}`] }}</div>
       <div>
         <div>
           <ProductGallery :images="product.images" />
