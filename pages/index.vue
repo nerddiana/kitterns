@@ -56,14 +56,12 @@
       />
     </section>
 
-    <template>
-      <section>
-        <!-- <sort-button btn-name="Precio" /> -->
-        <commentinput />
-      </section>
-    </template>
+    <section>
+      <!-- <sort-button btn-name="Precio" /> -->
+      <commentinput />
+    </section>
 
-    <template class="product-cards">
+    <div class="product-cards">
       <section>
         <h2 class="px-6 mb-4 h2-b">¡OFERTAS!</h2>
         <div
@@ -90,14 +88,14 @@
           </div>
         </div>
       </section>
-    </template>
+    </div>
 
-    <template>
+    <div>
       <div class="">
         <section>
           <h2 class="mb-4 px-6 h2-b">Categorías</h2>
           <div class="overflow-x-scroll px-6 pb-10 hide-scroll-bar">
-            <div class="flex flex-nowrap">
+            <!--div class="flex flex-nowrap">
               <div class="inline-block mr-6">
                 <card-categorie card-text="Juegos y juguetes" />
               </div>
@@ -114,17 +112,17 @@
                 <card-categorie card-text="Productos de oficina" />
               </div>
               <div class="list-end-spacer"></div>
-            </div>
+            </div-->
           </div>
         </section>
       </div>
-    </template>
+    </div>
   </div>
 </template>
 
 <script>
 import gql from 'graphql-tag'
-import CardCategorie from '~/components/card-categorie.vue'
+
 export default {
   apollo: {
     products: gql`
@@ -142,11 +140,6 @@ export default {
         }
       }
     `,
-  },
-  data() {
-    return {
-      valor: CardCategorie,
-    }
   },
   methods: {
     onInput(e) {

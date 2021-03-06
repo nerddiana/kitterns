@@ -28,9 +28,8 @@ export default {
         if (this.$route.query.category) {
           return gql`
             query getProductsByCategory($category_name: name) {
-              products(where: { category: { _eq: $category_name } }) {
+              products(where: { category_name: { _eq: $category_name } }) {
                 id
-                category
                 current_price
                 description
                 images
@@ -47,7 +46,6 @@ export default {
             query getProductsByCategory {
               products {
                 id
-                category
                 current_price
                 description
                 images
