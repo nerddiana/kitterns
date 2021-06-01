@@ -1,29 +1,17 @@
 # Kitterns
-This is a repo resultant of the one week Olympia Challenge, part of the Platzi Challenge.
-
-In this challenge, the team, work design and build a E-Commerce startup with a real business model and code.
-
-For more details about the challenge, can you read the original post:
-
+This is a repo resultant of the one week Olympia Challenge, part of the Platzi Challenge.<br/>
+In this challenge, the team, work design and build a E-Commerce startup with a real business model and code.<br/>
+For more details about the challenge, can you read the original post:<br/>
 https://platzi.com/blog/olimpiadas-olympia-challenge/
 
-
-The challenge was more than code, is about team work, desing, marketing, user experience research and product market fit.
-
-For more details about our own results, can you read the notion dashboard:
-
+The challenge was more than code, is about team work, desing, marketing, user experience research and product market fit.<br/>
+For more details about our own results, can you read the notion dashboard:<br/>
 https://www.notion.so/Kitterns-Dashboard-a726514c2e844cafa6fea3ca5ad2c743
 
-
-
-Team members:
-
-Diana Martínez as FullStack Developer, UI Designer and Business Model @diana_nerd,
-
-Valeria Vichy as FrontEnd Developer and Designer @valvitch
-
-Ximena Cruz as UX Research, Business Model and Marketing @helenismo23
-
+Team members:<br/>
+**Diana Martínez @diana_nerd** | FullStack Developer, UI Design and Business Model<br/>
+**Valeria Vichy @valvitch** | FrontEnd Developer and Design<br/>
+**Ximena Cruz @helenismo23** | UX Research, Business Model and Marketing<br/>
 
 Follow us on twitter :D
 
