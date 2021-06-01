@@ -32,4 +32,7 @@ $ yarn start
 $ yarn generate
 ```
 
+You can see this site in https://www.kitterns.com/
+(the site is uncomplete, ¡but all the work is real!)
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
